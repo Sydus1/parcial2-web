@@ -11,7 +11,7 @@ export class PacienteService {
         private pacienteRepository: Repository<Paciente>,
         @InjectRepository(Medico)
         private medicoRepository: Repository<Medico>,
-    ) {}
+  ) {}
 
     async create(paciente: Partial<Paciente>): Promise<Paciente> {
         if (paciente.nombre && paciente.nombre.length < 3) {
